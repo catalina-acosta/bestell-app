@@ -143,6 +143,7 @@ i {
     border: 1px solid var(--dark-grey);
     border-radius: 4px;
     padding: 12px;
+    margin: 12px 0;
 }
 
 .title {
