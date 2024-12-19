@@ -6,13 +6,10 @@
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
-}
 
 /* .content-box {
-    max-width: 1280px;
-    height: 100%;
+max-width: 1280px;
+height: 100%;
 } */
 
 /* general structure  */
@@ -21,7 +18,8 @@ a {
     --orange: #f36805;
     --light-orange: #FCAC73;
     --black: #262322;
-    --light-grey: #ECE6EF;
+    --dark-grey: #615956;
+    --light-grey: #FFF3EB;
 }
 
 body {
@@ -34,32 +32,44 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f36805;
+    background-color: var(--orange);
     padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+
+p {
+    margin: 8px 0;
 }
 
 header img {
     width: 100px;
 }
 
-i {
+.fa-bars {
     font-size: 24px;
     color: white;
+}
+
+i {
+    font-size: 24px;
+    color: var(--orange)
 }
 
 .content-wrapper{
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    height: 1400px;
 }
 .content {
-    background-color: aqua;
     width: calc(100% - 308px);
 }
 
 .basket-wrapper {
-    background-color: blueviolet;
+    background-color: white;
     width: 300px;
     flex-grow: 1;
 }
@@ -67,9 +77,9 @@ i {
 .basket {
     width: 100%;
     height: 400px;
-    background-color: aquamarine;
     position: sticky;
     top: 0;
+    padding: 12px;
 }
 
 .main-img-container {
@@ -84,12 +94,88 @@ i {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 2px solid grey;
+    border: 2px solid var(--light-grey);
     object-fit: cover;
     object-position: center;
     background-color: white;
+    position: absolute;
+    top: 246px;
+    left: 35%;
 }
 
 #restaurantLogo{
     width: 140px;
+}
+
+.section-title {
+    margin: 12px;
+}
+
+.img-container {
+    height: 140px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.menu-navigation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--light-grey);
+}
+
+.menu-navigation i {
+    font-size: 36px;
+}
+
+.restaurant-info {
+    padding: 18px 0 18px 18px;
+}
+
+#mainDishes, #appetizers {
+    padding: 12px;
+}
+
+.dish-card {
+    border: 1px solid var(--dark-grey);
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.basket h2 {
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--dark-grey);
+    margin-bottom: 12px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.subtotal, .delivery-costs, .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    height: 120px;
+    background-color: var(--orange);
+    align-items: center;
+    color: white;
 }
