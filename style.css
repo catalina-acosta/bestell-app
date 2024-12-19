@@ -54,6 +54,10 @@ header img {
     color: white;
 }
 
+.fa-minus, .fa-plus {
+    cursor: pointer;
+}
+
 i {
     font-size: 24px;
     color: var(--orange)

@@ -20,7 +20,7 @@ function dishTemplate(index) {
             <div class="dish-card">
                 <div class="title">
                     <h3>${myDishes[index].name}</h3>
-                    <i class="fa-solid fa-plus"></i>
+                    <i onclick="addToBasket(${index})" class="fa-solid fa-plus"></i>
                 </div>
                 <p>${myDishes[index].description}</p>
                 <p class="price">${myDishes[index].price}€</p>
@@ -28,3 +28,9 @@ function dishTemplate(index) {
         `
 }
 
+function addToBasket(index) {
+    myBasket.push(myDishes[index]);
+
+}
+
+// build basket counter function that counts how many of one item are in the basket. maybe if ? 

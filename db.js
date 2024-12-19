@@ -120,3 +120,5 @@ let myDishes = [
     "mainDish": true
     }
 ];
+
+let myBasket = [];
