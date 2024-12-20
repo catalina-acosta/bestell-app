@@ -59,5 +59,8 @@ function addOneToBasket(item) {
 
 function deleteFromBasket(item) {
     myDishes[item].amount = 0;
+    myDishes[item]["isInBasket?"] = false;
     renderBasket();
 }
+
+// when item removed from basket, the item should not be visi
