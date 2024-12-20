@@ -53,8 +53,9 @@ header img {
     color: white;
 }
 
-.fa-minus, .fa-plus {
+.fa-minus, .fa-plus, .fa-trash-can {
     cursor: pointer;
+    font-size: 18px;
 }
 
 i {
@@ -75,6 +76,7 @@ i {
     background-color: white;
     width: 300px;
     flex-grow: 1;
+    box-shadow: -6px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .basket {
@@ -149,6 +151,9 @@ i {
     margin: 12px 0;
 }
 
+.dish-card:hover {
+    background-color: var(--light-orange);
+}
 .title {
     display: flex;
     justify-content: space-between;
@@ -169,12 +174,41 @@ i {
 .quantity {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 8px 0 40px 0;
 }
 
 .subtotal, .delivery-costs, .total {
     display: flex;
     justify-content: space-between;
+}
+
+.add-remove-item {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.order-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.order-div button {
+    color: white;
+    background-color: var(--orange);
+    border: none;
+    width: 100%;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-div button:hover {
+    background-color: var(--light-orange);
 }
 
 footer {

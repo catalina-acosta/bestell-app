@@ -35,8 +35,7 @@ function renderBasket() {
 function renderBasketTotal() {
     basketTotalRef = document.getElementById("basketTotal");
     let sumItems = 0;
-    let deliveryCosts = 5;
-
+    
     for (let index = 0; index < myDishes.length; index++) {
         if (myDishes[index]["isInBasket?"] == true) {
             let itemPrice = myDishes[index].price;
@@ -44,11 +43,24 @@ function renderBasketTotal() {
             sumItems += itemPrice * itemAmount;
         }
     }
+
+    let deliveryCosts = calcDeliveryCosts(sumItems);
     basketTotalRef.innerHTML = basketTotalTemplate(sumItems, deliveryCosts);
+}
+
+function calcDeliveryCosts(sumItems) {
+    if (sumItems == 0 || sumItems > 20) {
+        return 0;
+    } else {
+        return 5;
+    }
 }
 
 function removeOneFromBasket(item) {
     myDishes[item].amount --; 
+    if (myDishes[item].amount == 0) {
+        myDishes[item]["isInBasket?"] = false;
+    }
     renderBasket();
 }
 
@@ -63,4 +75,12 @@ function deleteFromBasket(item) {
     renderBasket();
 }
 
-// when item removed from basket, the item should not be visi
+// order button + dialog page
+
+// footer stylen
+
+// check images... object-position center not working // check kochwelt
+
+// add zero to prices 
+
+// basket content styling. padding + button
