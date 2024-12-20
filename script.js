@@ -77,6 +77,33 @@ function deleteFromBasket(item) {
 
 // order button + dialog page
 
+function openDialog() {
+    let dialogRef = document.getElementById("dialog");
+    dialogRef.classList.remove("d-none");
+    dialogRef.innerHTML += dialogTemplate();
+}
+
+function closeDialog() {
+    let dialogRef = document.getElementById("dialog");
+    dialogRef.classList.add("d-none");
+    dialogRef.innerHTML = "";
+}
+
+function dialogTemplate() {
+    return `
+            <div class="order-confirmation">
+                <div class="close-button"><i class="fa-solid fa-square-xmark" onclick="closeDialog()"></i></div>
+                <div class="order-information">
+                    <h2>Danke für deine Bestellung!</h2>
+                    <p>Lieferzeit: 25 Minuten</p>
+                    <div class="avatar-container-dialog">
+                        <img src="./assets/img/noodle-logo.png" id="restaurantLogo" alt="">
+                    </div>
+                </div>
+            </div>
+        `
+}
+
 // footer stylen
 
 // check images... object-position center not working // check kochwelt
