@@ -15,19 +15,6 @@ function renderDishCards() {
     }
 }
 
-function dishTemplate(index) {
-    return `
-            <div class="dish-card">
-                <div class="title">
-                    <h3>${myDishes[index].name}</h3>
-                    <i onclick="addToBasket(${index})" class="fa-solid fa-plus"></i>
-                </div>
-                <p>${myDishes[index].description}</p>
-                <p class="price">${myDishes[index].price}€</p>
-            </div>
-        `
-}
-
 function addToBasket(index) {
     myDishes[index]["isInBasket?"] = true;
     myDishes[index].amount ++;
@@ -41,24 +28,8 @@ function renderBasket() {
         if (myDishes[item]["isInBasket?"] == true) {
             basketContentRef.innerHTML += basketDishTemplate(item);
         }
-        
     }
     renderBasketTotal();
-}
-
-function basketDishTemplate(item) {
-    return `
-            <div class="basket-card">
-                <h3>${myDishes[item].name}</h3>
-                <div class="quantity">
-                    <i class="fa-solid fa-minus"></i>
-                    <p>${myDishes[item].amount}</p>
-                    <i class="fa-solid fa-plus"></i>
-                    <p>${myDishes[item].price}</p>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-            `
 }
 
 function renderBasketTotal() {
@@ -74,24 +45,19 @@ function renderBasketTotal() {
         }
     }
     basketTotalRef.innerHTML = basketTotalTemplate(sumItems, deliveryCosts);
-
 }
 
-function basketTotalTemplate(sumItems, deliveryCosts){
-    return `
-            <div class="basket-total">
-                <div class="subtotal">
-                    <p>Zwischensumme</p>
-                    <p>${sumItems}</p>
-                </div>
-                <div class="delivery-costs">
-                    <p>Lieferkosten</p>
-                    <p>${deliveryCosts}</p>
-                </div>
-                <div class="total">
-                    <h3>Gesamt</h3>
-                    <h3>${sumItems + deliveryCosts}</h3>
-                </div>
-            </div>        
-    `
+function removeOneFromBasket(item) {
+    myDishes[item].amount --; 
+    renderBasket();
+}
+
+function addOneToBasket(item) {
+    myDishes[item].amount ++;
+    renderBasket();
+}
+
+function deleteFromBasket(item) {
+    myDishes[item].amount = 0;
+    renderBasket();
 }
