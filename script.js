@@ -108,6 +108,5 @@ function dialogTemplate() {
 
 // check images... object-position center not working // check kochwelt
 
-// add zero to prices 
+// responsivness
 
-// basket content styling. padding + button
