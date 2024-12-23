@@ -369,6 +369,10 @@ footer p {
         background-color: var(--orange);
         padding: 12px;
     }
+
+    footer p {
+        color: var(--orange);
+    }
 }
 
 @media(max-width: 520px) {
