@@ -55,7 +55,18 @@
             </div>
         </section>
         <section class="basket-wrapper">
-            <div class="basket">
+            <div id="basketDialog" class="d-none">
+                <div class="basket d-none" id="basket-responsive">
+                    <h2>Warenkorb</h2>
+                    <div id="basketContent">
+                    </div>
+                    <div id="basketTotal">
+                    </div>
+                </div>
+                <button id="basketOpenCloseButton" onclick="closeBasketDialog()">Warenkorb</button>
+            </div>
+            <button id="basketOpenCloseButton" onclick="openBasketDialog()">Warenkorb</button>
+            <div class="basket" id="basketBigDevises">
                 <h2>Warenkorb</h2>
                 <div id="basketContent">
                 </div>

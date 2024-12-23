@@ -149,6 +149,10 @@ i {
     object-position: center;
 }
 
+.main-img-container img {
+    width: 100%;
+}
+
 .avatar-container {
     width: 140px;
     height: 140px;
@@ -163,7 +167,7 @@ i {
 }
 
 #restaurantLogo{
-    width: 140px;
+    width: 100%;
 }
 
 .section-title {
@@ -177,6 +181,10 @@ i {
     object-fit: cover;
     object-position: center;
     border-radius: 4px;
+}
+
+.img-container img {
+    width: 100%;
 }
 
 .menu-navigation {
@@ -261,10 +269,38 @@ i {
     padding: 12px;
     border-radius: 4px;
     cursor: pointer;
+    display: none;
 }
 
 .order-div button:hover {
     background-color: var(--light-orange);
+}
+
+#basketOpenCloseButton {
+    border: none;
+    color: white;
+    background-color: var(--orange);
+    width: 100%;
+    height: 48px;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 12px 0;
+    display: none;
+}
+
+#basketOpenCloseButton:hover {
+    background-color: var(--light-orange);
+}
+
+#basketDialog {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
 }
 
 footer {
@@ -275,8 +311,23 @@ footer {
 }
 
 @media(max-width: 832px) {
-    .content {
+    .content-wrapper {
+        flex-direction: column;
         width: 100vw;
+    }
+
+    #basketOpenCloseButton{
+        display: block;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #basketBigDevises {
+        display: none;
+    }
+    
+    .content {
+        width: 100%;
     }
 
     .basket-wrapper {

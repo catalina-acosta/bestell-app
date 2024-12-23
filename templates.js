@@ -49,3 +49,18 @@ function basketTotalTemplate(sumItems, deliveryCosts){
             </div>        
         `
 }
+
+function dialogTemplate() {
+    return `
+            <div class="order-confirmation">
+                <div class="close-button"><i class="fa-solid fa-square-xmark" onclick="closeDialog()"></i></div>
+                <div class="order-information">
+                    <h2>Danke für deine Bestellung!</h2>
+                    <p>Lieferzeit: 25 Minuten</p>
+                    <div class="avatar-container-dialog">
+                        <img src="./assets/img/noodle-logo.png" id="restaurantLogo" alt="">
+                    </div>
+                </div>
+            </div>
+        `
+}

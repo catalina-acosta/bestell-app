@@ -2,7 +2,6 @@ function init() {
     renderDishCards();
 }
 
-
 function renderDishCards() {
     let mainDishRef = document.getElementById("mainDishCards");
     let appetizersRef = document.getElementById("appetizerCard");
@@ -75,8 +74,6 @@ function deleteFromBasket(item) {
     renderBasket();
 }
 
-// order button + dialog page
-
 function openDialog() {
     let dialogRef = document.getElementById("dialog");
     dialogRef.classList.remove("d-none");
@@ -89,24 +86,22 @@ function closeDialog() {
     dialogRef.innerHTML = "";
 }
 
-function dialogTemplate() {
-    return `
-            <div class="order-confirmation">
-                <div class="close-button"><i class="fa-solid fa-square-xmark" onclick="closeDialog()"></i></div>
-                <div class="order-information">
-                    <h2>Danke für deine Bestellung!</h2>
-                    <p>Lieferzeit: 25 Minuten</p>
-                    <div class="avatar-container-dialog">
-                        <img src="./assets/img/noodle-logo.png" id="restaurantLogo" alt="">
-                    </div>
-                </div>
-            </div>
-        `
+function openBasketDialog() {
+    let basketDialogRef = document.getElementById("basketDialog");
+    basketDialogRef.classList.remove("d-none");
+    let basketRespRef = document.getElementById("basket-responsive");
+    basketRespRef.classList.remove("d-none");
+    renderBasket();
 }
+
+function closeBasketDialog() {
+    let basketDialogRef = document.getElementById("basketDialog");
+    basketDialogRef.classList.add("d-none");
+    let basketRespRef = document.getElementById("basket-responsive");
+    basketRespRef.classList.add("d-none");
+}
+
 
 // footer stylen
 
-// check images... object-position center not working // check kochwelt
-
 // responsivness
-
