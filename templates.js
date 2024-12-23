@@ -21,7 +21,7 @@ function basketDishTemplate(item) {
                         <p>${myDishes[item].amount}</p>
                         <i class="fa-solid fa-plus" onclick="addOneToBasket(${item})"></i>
                     </div>
-                    <p>${myDishes[item].price.toFixed(2)}€</p>
+                    <p>${myDishes[item].price.toFixed(2) * myDishes[item].amount}€</p>
                     <i class="fa-solid fa-trash-can" onclick="deleteFromBasket(${item})"></i>
                 </div>
             </div>
