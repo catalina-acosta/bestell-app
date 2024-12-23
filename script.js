@@ -20,8 +20,9 @@ function addToBasket(index) {
     renderBasket();
 }
 
+
 function renderBasket() {
-    let basketContentRef = document.getElementById("basketContent");
+    let basketContentRef =  document.getElementById("basketContent");
     basketContentRef.innerHTML = "";
     for (let item = 0; item < myDishes.length; item++) {
         if (myDishes[item]["isInBasket?"] == true) {
@@ -87,19 +88,19 @@ function closeDialog() {
 }
 
 function openBasketDialog() {
+    renderBasket()
+    let basket = document.getElementById("basketBigDevises");
+    basket.setAttribute("id", "basketDialog" );
     let basketDialogRef = document.getElementById("basketDialog");
-    basketDialogRef.classList.remove("d-none");
-    let basketRespRef = document.getElementById("basket-responsive");
-    basketRespRef.classList.remove("d-none");
-    renderBasket();
+    basketDialogRef.removeAttribute("basketBigDevises");
 }
 
 function closeBasketDialog() {
     let basketDialogRef = document.getElementById("basketDialog");
-    basketDialogRef.classList.add("d-none");
-    let basketRespRef = document.getElementById("basket-responsive");
-    basketRespRef.classList.add("d-none");
+    basketDialogRef.setAttribute("id", "basketBigDevises");
+    basketDialogRef.removeAttribute("basketDialog");
 }
+
 
 
 // footer stylen

@@ -54,27 +54,21 @@
                 </div>
             </div>
         </section>
+        <button id="basketOpenCloseButton" class="basket-open-close-btn" onclick="openBasketDialog()">Warenkorb</button>
         <section class="basket-wrapper">
-            <div id="basketDialog" class="d-none">
-                <div class="basket d-none" id="basket-responsive">
-                    <h2>Warenkorb</h2>
-                    <div id="basketContent">
-                    </div>
-                    <div id="basketTotal">
-                    </div>
-                </div>
-                <button id="basketOpenCloseButton" onclick="closeBasketDialog()">Warenkorb</button>
-            </div>
-            <button id="basketOpenCloseButton" onclick="openBasketDialog()">Warenkorb</button>
             <div class="basket" id="basketBigDevises">
                 <h2>Warenkorb</h2>
                 <div id="basketContent">
                 </div>
                 <div id="basketTotal">
                 </div>
+                <button class="basket-open-close-btn d-none" id="closeBasketDialog" onclick="closeBasketDialog()">Warenkorb</button>
             </div>
         </section>
     </div>
-    <footer>I am the footer</footer>
+    <footer>
+        <img src="./assets/Logo/Logo.png" alt="logo">
+        <p>developed by Catalina Acosta Rivera | 2024</p>
+    </footer>
 </body>
 </html>

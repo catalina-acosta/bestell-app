@@ -44,7 +44,7 @@ p {
     margin: 8px 0;
 }
 
-header img {
+header img, footer img {
     width: 100px;
 }
 
@@ -139,6 +139,7 @@ i {
     position: sticky;
     top: 0;
     padding: 12px;
+    overflow: scroll;
 }
 
 .main-img-container {
@@ -276,7 +277,7 @@ i {
     background-color: var(--light-orange);
 }
 
-#basketOpenCloseButton {
+.basket-open-close-btn {
     border: none;
     color: white;
     background-color: var(--orange);
@@ -301,12 +302,25 @@ i {
     right: 0;
     bottom: 0;
     z-index: 20;
+    height: 100vh;
 }
 
 footer {
     height: 120px;
     background-color: var(--orange);
     align-items: center;
+    color: var(white);
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer img {
+    background-color: var(--orange);
+    padding: 12px;
+}
+
+footer p {
     color: white;
 }
 
@@ -316,10 +330,13 @@ footer {
         width: 100vw;
     }
 
-    #basketOpenCloseButton{
+    .basket-open-close-btn {
         display: block;
-        position: fixed;
+    }
+
+    #basketOpenCloseButton{
         bottom: 0;
+        position: sticky;
     }
 
     #basketBigDevises {
@@ -342,6 +359,15 @@ footer {
         height: 400px;
         position: sticky;
         top: 0;
+        padding: 12px;
+    }
+
+    footer {
+        background-color: white;
+    }
+
+    footer img {
+        background-color: var(--orange);
         padding: 12px;
     }
 }
