@@ -88,6 +88,7 @@ function emptyBasket() {
             myDishes[index]["isInBasket?"] = false;
         }
     }
+    renderBasket();
 }
 
 function closeDialog() {
