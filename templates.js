@@ -43,9 +43,7 @@ function basketTotalTemplate(sumItems, deliveryCosts){
                     <h3>Gesamt</h3>
                     <h3>${(sumItems + deliveryCosts).toFixed(2)}€</h3>
                 </div>
-                <div class="order-div">
-                    <button onclick="openDialog()">Bestellen</button>
-                </div>
+                <div class="order-div"><button id="orderBtn">bestellen</button></div>
             </div>        
         `
 }

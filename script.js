@@ -79,6 +79,15 @@ function openDialog() {
     let dialogRef = document.getElementById("dialog");
     dialogRef.classList.remove("d-none");
     dialogRef.innerHTML += dialogTemplate();
+    emptyBasket();
+}
+
+function emptyBasket() {
+    for (let index = 0; index < myDishes.length; index++) {
+        if (myDishes[index]["isInBasket?"] == true) {
+            myDishes[index]["isInBasket?"] = false;
+        }
+    }
 }
 
 function closeDialog() {
@@ -100,9 +109,3 @@ function closeBasketDialog() {
     basketDialogRef.setAttribute("id", "basketBigDevises");
     basketDialogRef.removeAttribute("basketDialog");
 }
-
-
-
-// footer stylen
-
-// responsivness

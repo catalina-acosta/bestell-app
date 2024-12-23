@@ -17,6 +17,7 @@ max-width: 1280px;
     --orange: #f36805;
     --light-orange: #FCAC73;
     --black: #262322;
+    --darker-grey: #474544;
     --dark-grey: #B2ABA9;
     --light-grey: #FFF3EB;
 }
@@ -37,7 +38,7 @@ header {
 
 a {
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--darker-grey);
 }
 
 p {
@@ -261,7 +262,7 @@ i {
     margin-top: 24px;
 }
 
-.order-div button {
+#orderBtn {
     color: white;
     background-color: var(--orange);
     border: none;
