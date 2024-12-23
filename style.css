@@ -135,7 +135,7 @@ i {
 
 .basket {
     width: 100%;
-    height: 400px;
+    height: 1000px;
     position: sticky;
     top: 0;
     padding: 12px;
@@ -327,7 +327,6 @@ footer p {
 @media(max-width: 832px) {
     .content-wrapper {
         flex-direction: column;
-        width: 100vw;
     }
 
     .basket-open-close-btn {
@@ -369,5 +368,12 @@ footer p {
     footer img {
         background-color: var(--orange);
         padding: 12px;
+    }
+}
+
+@media(max-width: 520px) {
+    .avatar-container {
+    width: 100px;
+    height: 100px;
     }
 }
